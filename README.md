@@ -26,3 +26,4 @@ Notes
 References
 ----------
 [tutoriel Scratchapixel](http://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/ray-tracing-practical-example)
+[Raytracing Wikipedia](https://en.wikipedia.org/wiki/Ray_tracing_(graphics))
