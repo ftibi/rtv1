@@ -21,3 +21,8 @@ Notes
 
 > la couleur du pixel à afficher va dependre des angles, de l'intensité lumineuse,
 > de la couleur de l'objet
+
+
+References
+----------
+[tutoriel Scratchapixel](http://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/ray-tracing-practical-example)
