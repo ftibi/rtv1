@@ -10,6 +10,9 @@ Notes
 	la position/orientation du plan image, et la position des objets dans la scene
 - qqpart je vais declarer in const tab de fonctions pour associer le type d'obj a une
 	fonction de calcul de collision
+- est-ce que la scene elle meme doit etre pixelisee ?? A priori non?
+ 	- il y a au moins un pas de calcul, donc ca revient a avoir une resolution
+	- Sinon utiliser une solution analytique ou quadratique!
 
 À faire
 -------

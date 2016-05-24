@@ -1,36 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec_norme.c                                        :+:      :+:    :+:   */
+/*   trace_ray.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/24 18:31:08 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/24 20:46:28 by tfolly           ###   ########.fr       */
+/*   Created: 2016/05/24 19:33:43 by tfolly            #+#    #+#             */
+/*   Updated: 2016/05/24 19:56:37 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/rtv1.h"
 
 /*
-** Cette fonction renvoit un vecteur norme
+**	A partir d'un point et d'un vecteur, tracer tous les points de ce rayon
 */
-
-double	vec_norme(t_vec vec)
-{
-	double	norme;
-
-	norme = sqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z);
-	return (norme);
-}
-
-t_vec	vec_normalize(t_vec vec)
-{
-	double	norme;
-
-	norme = sqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z);
-	vec.x /= norme;
-	vec.y /= norme;
-	vec.z /= norme;
-	return (vec);
-}

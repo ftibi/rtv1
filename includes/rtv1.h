@@ -6,7 +6,7 @@
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/24 16:54:20 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/24 19:00:26 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/05/24 20:46:45 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@
 # define SPHERE 1
 # define CONE 2
 # define CYLINDRE 3
+
+# define RESOLUTION 0.1
 
 typedef struct	s_vec
 {
@@ -59,8 +61,12 @@ typedef struct	s_scene
 }				t_scene;
 
 t_objs			*add_objs(int color, int shape, int size, t_vec pos, t_vec vec);
-t_objs			*sphere(int color, int size, t_vec pos, t_vec vec);
-t_vec			vec_norme(t_vec vec);
+t_vec			*sphere(t_objs *sphere, t_vec pt, t_vec ray);
+t_vec			vec_normalize(t_vec vec);
+double			vec_norme(t_vec vec);
 t_vec			two_points_ray(t_vec a, t_vec b);
 
+double			produit_scalaire(t_vec a, t_vec b);
+t_vec			sum_vec(t_vec a, t_vec b);
+t_vec			sub_vec(t_vec a, t_vec b);
 #endif

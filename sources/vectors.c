@@ -1,36 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec_norme.c                                        :+:      :+:    :+:   */
+/*   vectors.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/24 18:31:08 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/24 20:46:28 by tfolly           ###   ########.fr       */
+/*   Created: 2016/05/24 20:36:36 by tfolly            #+#    #+#             */
+/*   Updated: 2016/05/24 20:45:11 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/rtv1.h"
 
 /*
-** Cette fonction renvoit un vecteur norme
+** Recoder moi meme les operations sur les vecteurs
+** addition, soustraction, produit scalaire
 */
 
-double	vec_norme(t_vec vec)
+double	produit_scalaire(t_vec a, t_vec b)
 {
-	double	norme;
+	double res;
 
-	norme = sqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z);
-	return (norme);
+	res = a.x * b.x + a.y * b.y + a.z * b.z;
+	return (res);
 }
 
-t_vec	vec_normalize(t_vec vec)
+t_vec	sum_vec(t_vec a, t_vec b)
 {
-	double	norme;
+	t_vec	res;
 
-	norme = sqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z);
-	vec.x /= norme;
-	vec.y /= norme;
-	vec.z /= norme;
-	return (vec);
+	res.x = a.x + b.x;
+	res.y = a.y + b.y;
+	res.z = a.z + b.z;
+	return (res);
+}
+
+t_vec	sub_vec(t_vec a, t_vec b)
+{
+	t_vec	res;
+
+	res.x = a.x - b.x;
+	res.y = a.y - b.y;
+	res.z = a.z - b.z;
+	return (res);
 }
