@@ -6,7 +6,7 @@
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/24 16:54:20 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/24 17:10:57 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/05/24 17:45:25 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,20 @@
 # define CONE 2
 # define CYLINDRE 3
 
+typedef struct	s_vec
+{
+	double		x;
+	double		y;
+	double		z;
+}				t_vec;
+
 typedef struct	s_objs
 {
 	int				color;
-	int				x;
-	int				y;
 	int				shape;
 	int				size;
+	t_vec			pos;
+	t_vec			vec;
 	struct s_objs	*next;
 }				t_objs;
 
@@ -41,6 +48,6 @@ typedef struct	s_scene
 	int			size;
 }				t_scene;
 
-t_objs			*new_objs(int color, int x, int y, int shape, int size);
+t_objs			*new_objs(int color, int shape, int size, t_vec pos, t_vec vec);
 
 #endif

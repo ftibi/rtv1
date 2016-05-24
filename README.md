@@ -11,7 +11,11 @@ Notes
 
 À faire
 -------
+- fonction de construction du plan image (centre, vecteur normal, taille)
+	- pour creer le plan je vais utiliser les 2 vecteurs qui partent du centre
+	- il va faloir faire des arrondis mais normalement on ne perd pas de resolution
 - fonction de construction d'un rayon
+	- *AB* = *OB* - *OA*
 - fonction de construction d'un objet
 - fonction de test de collision entre un objet et un rayon
 - le calcul de ce qu'il se passe si il y a collision va dependre de plsr choses
@@ -22,9 +26,12 @@ Notes
 > la couleur du pixel à afficher va dependre des angles, de l'intensité lumineuse,
 > de la couleur de l'objet
 
+> pour l'instant je considere la distance plan/camera constante ?
 
 References
 ----------
 [tutoriel Scratchapixel](http://www.scratchapixel.com/lessons/3d-basic-rendering/introduction-to-ray-tracing/ray-tracing-practical-example)
 
 [Raytracing Wikipedia](https://en.wikipedia.org/wiki/Ray_tracing_(graphics))
+
+[Equation plan Wikipedia](https://fr.wikipedia.org/wiki/Plan_(math%C3%A9matiques)#D.C3.A9finition_par_un_vecteur_normal_et_un_point)
