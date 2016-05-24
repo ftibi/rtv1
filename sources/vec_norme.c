@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sphere.c                                           :+:      :+:    :+:   */
+/*   vec_norme.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/24 16:53:48 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/24 19:09:37 by tfolly           ###   ########.fr       */
+/*   Created: 2016/05/24 18:31:08 by tfolly            #+#    #+#             */
+/*   Updated: 2016/05/24 18:42:02 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/rtv1.h"
 
-/*
-** Collision pour sphere
-*/
-
-int		sphere(t_objs sphere, t_vec pt, t_vec ray)
+t_vec	vec_norme(t_vec vec)
 {
+	double	norme;
 
-	return ();
+	norme = sqrt(vec.x * vec.x + vec.y * vec.y + vec.z * vec.z);
+	vec.x /= norme;
+	vec.y /= norme;
+	vec.z /= norme;
+	return (vec);
 }

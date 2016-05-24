@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sphere.c                                           :+:      :+:    :+:   */
+/*   two_points_ray.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/24 16:53:48 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/24 19:09:37 by tfolly           ###   ########.fr       */
+/*   Created: 2016/05/24 18:23:38 by tfolly            #+#    #+#             */
+/*   Updated: 2016/05/24 18:42:46 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/rtv1.h"
 
 /*
-** Collision pour sphere
+** Vecteur norme allant du point A vers le point B
 */
 
-int		sphere(t_objs sphere, t_vec pt, t_vec ray)
+t_vec	two_points_ray(t_vec a, t_vec b)
 {
+	t_vec	ray;
 
-	return ();
+	ray.x = (a.x - b.x);
+	ray.y = (a.y - b.y);
+	ray.z = (a.z - b.z);
+	ray = vec_norme(ray);
+	return (ray);
 }

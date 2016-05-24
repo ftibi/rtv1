@@ -8,6 +8,8 @@ Notes
 	(il faut avoir ca en tete pour le tracer des rayons)
 - apparemment je n'ai pas besoin de stocker la scene, il me suffit de connaitre
 	la position/orientation du plan image, et la position des objets dans la scene
+- qqpart je vais declarer in const tab de fonctions pour associer le type d'obj a une
+	fonction de calcul de collision
 
 À faire
 -------
@@ -18,6 +20,7 @@ Notes
 	- *AB* = *OB* - *OA*
 - fonction de construction d'un objet
 - fonction de test de collision entre un objet et un rayon
+	- peut avoir plusieurs resultats, on garde le premier en venant de la cam
 - le calcul de ce qu'il se passe si il y a collision va dependre de plsr choses
 	- transparence ? si oui il y aura une partie refraction
 	- calcul de la normale à l'impact
