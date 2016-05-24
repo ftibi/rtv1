@@ -5,7 +5,8 @@ Notes
 -----
 - penser aux differentes specificites des materiaux assez tot
 
-À faire:
+À faire
+-------
 - fonction de construction d'un rayon
 - fonction de construction d'un objet
 - fonction de test de collision entre un objet et un rayon
