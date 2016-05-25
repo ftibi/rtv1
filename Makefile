@@ -3,7 +3,8 @@ NAME = fractol
 SRC_PATH = ./sources
 
 SRC_NAME = add_objs.c calc_plan.c img_plan.c my_pixel_put_img.c sphere.c\
-			two_points_ray.c vec_norme.c vectors.c key_fct.c data_init.c
+			two_points_ray.c vec_norme.c vectors.c key_fct.c data_init.c\
+			premier_plan.c
 
 SRC = $(addprefix $(SRC_PATH)/,$(SRC_NAME))
 

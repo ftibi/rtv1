@@ -6,7 +6,7 @@
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 17:47:21 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/25 19:12:20 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/05/25 19:42:20 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,24 +18,30 @@ void	calc_plan(char *datastr, t_objs *obj, t_data *data)
 	int		j;
 	t_vec	pt;
 	t_vec	ray;
-	t_vec	cam;
 	t_objs	*obj_tmp;
+	t_vec	*aff;
 
-	cam = vec_init(SIZE / 2, SIZE / 2, -SIZE / 2);
 	i = 0;
 	while (i < SIZE)
 	{
 		j = 0;
 		while (j < SIZE)
 		{
-			pt.x = i;
-			pt.y = j;
-			pt.z = 0;
-			ray = two_points_ray(cam, pt);
+			pt = vec_init(i, j, 0);
+			ray = two_points_ray(data->cam, pt);
 			obj_tmp = obj;
+			aff = 0;
 			while (obj_tmp) //ici on va colorer l'image avec le dernier objet insere, on ne tient pas encore compte de la distance
 			{
-				if (sphere(obj_tmp, pt, ray))
+				if (!aff)
+				{
+					if (sphere(obj_tmp, pt, ray))
+					{
+						my_pixel_put_img(data->mlx, data->bpp, i, j, obj_tmp->color, datastr);
+						aff = sphere(obj_tmp, pt, ray);
+					}
+				}
+				else if (sphere(obj_tmp, pt, ray) && premier_plan(sphere(obj_tmp, pt, ray), aff, data))//je dois ecrire une focntion qui verifie que cam->mvxpt < cam->aff
 					my_pixel_put_img(data->mlx, data->bpp, i, j, obj_tmp->color, datastr);
 				obj_tmp = obj_tmp->next;
 			}

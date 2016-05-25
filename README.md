@@ -15,6 +15,8 @@ Notes
 
 À faire
 -------
+- Pq je segF lorsque j'augmente la position d'un objet > SIZE
+	- peut etre implementer avec des long double ?
 - mtn que j'ai un programme simple qui fct, il faut que je refactorise et que je reflechisse au prochaines etapes
 - pour l'instant, j'insere les spheres une a une, celle qui apparait est la derniere a avoir ete inseree
 	- peut avoir plusieurs resultats, on garde le premier en venant de la cam

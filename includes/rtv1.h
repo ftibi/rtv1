@@ -6,7 +6,7 @@
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/24 16:54:20 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/25 18:56:36 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/05/25 19:31:20 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,13 @@
 # define CONE 2
 # define CYLINDRE 3
 
+typedef struct	s_vec
+{
+	double		x;
+	double		y;
+	double		z;
+}				t_vec;
+
 typedef struct	s_data
 {
 	void		*mlx;
@@ -35,14 +42,8 @@ typedef struct	s_data
 	char		*datastr;
 	int			bpp;
 	int			end;
+	t_vec		cam;
 }				t_data;
-
-typedef struct	s_vec
-{
-	double		x;
-	double		y;
-	double		z;
-}				t_vec;
 
 typedef struct	s_param
 {
@@ -77,6 +78,7 @@ t_vec			vec_normalize(t_vec vec);
 double			vec_norme(t_vec vec);
 t_vec			two_points_ray(t_vec a, t_vec b);
 void			calc_plan(char *datastr, t_objs *obj, t_data *data);
+int				premier_plan(t_vec *new, t_vec *ref, t_data *data);
 
 double			produit_scalaire(t_vec a, t_vec b);
 t_vec			sum_vec(t_vec a, t_vec b);
