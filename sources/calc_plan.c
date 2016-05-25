@@ -6,7 +6,7 @@
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 17:47:21 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/25 19:42:20 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/05/25 20:31:54 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ void	calc_plan(char *datastr, t_objs *obj, t_data *data)
 		j = 0;
 		while (j < SIZE)
 		{
-			pt = vec_init(i, j, 0);
+			pt = vec_init(i, j, 0); // C'est ici que je dois inclure la pos du plan
+									// de plus, la pos de la cam doit etre liee a celle du plan
 			ray = two_points_ray(data->cam, pt);
 			obj_tmp = obj;
 			aff = 0;

@@ -25,6 +25,11 @@ Notes
 	- calcul de la normale à l'impact
 	- tir du rayon secondaire vers la source de lumiere
 - fonction de construction d'un objet(pour l'instant j'ai fais la sphere)
+- fonction pour deplacer le plan
+	- deplacer le plan
+	- clear data
+	- mettre les nvlles donnees dans data
+	- reafficher l'image
 
 > la couleur du pixel à afficher va dependre des angles, de l'intensité lumineuse,
 > de la couleur de l'objet
