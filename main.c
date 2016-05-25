@@ -6,7 +6,7 @@
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/23 19:36:12 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/25 18:58:00 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/05/25 19:11:32 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int		main(void)
 	int bpp = 4;
 	int size_line = SIZE * bpp / 8;
 	int end = 1;
+	int		obj_size;
 	t_objs	*sphere;
 	t_data	*data;
 	t_vec	pos;
@@ -37,10 +38,14 @@ int		main(void)
 	data = data_init(mlx, img, datastr, bpp, end);
 	// creation d'un objet
 	pos = vec_init(SIZE / 2, SIZE / 2, SIZE);
-	int obj_size = 300;
+	obj_size = 300;
 	sphere = add_objs(0xFF0000, SPHERE, obj_size, pos, pos, 0);
+	pos = vec_init(SIZE / 4, SIZE / 4, SIZE / 2);
+	obj_size = 100;
+	sphere = add_objs(0x00FF00, SPHERE, obj_size, pos, pos, sphere);
 	// remplissage de data
 	calc_plan(datastr, sphere, data);
+	// calc_plan(datastr, sphere->next, data);
 	mlx_put_image_to_window(mlx, win, img, 0, 0);
 	mlx_key_hook(win, my_key_funct, 0);
 	mlx_loop(mlx);

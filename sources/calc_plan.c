@@ -6,7 +6,7 @@
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/25 17:47:21 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/25 17:57:29 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/05/25 19:12:20 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,9 @@ void	calc_plan(char *datastr, t_objs *obj, t_data *data)
 	t_vec	pt;
 	t_vec	ray;
 	t_vec	cam;
+	t_objs	*obj_tmp;
 
-	cam.x = SIZE / 2;
-	cam.y = SIZE / 2;
-	cam.z = -SIZE / 2;
+	cam = vec_init(SIZE / 2, SIZE / 2, -SIZE / 2);
 	i = 0;
 	while (i < SIZE)
 	{
@@ -33,8 +32,13 @@ void	calc_plan(char *datastr, t_objs *obj, t_data *data)
 			pt.y = j;
 			pt.z = 0;
 			ray = two_points_ray(cam, pt);
-			if (sphere(obj, pt, ray))
-				my_pixel_put_img(data->mlx, data->bpp, i, j, obj->color, datastr);
+			obj_tmp = obj;
+			while (obj_tmp) //ici on va colorer l'image avec le dernier objet insere, on ne tient pas encore compte de la distance
+			{
+				if (sphere(obj_tmp, pt, ray))
+					my_pixel_put_img(data->mlx, data->bpp, i, j, obj_tmp->color, datastr);
+				obj_tmp = obj_tmp->next;
+			}
 			j++;
 		}
 		i++;

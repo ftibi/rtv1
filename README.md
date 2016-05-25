@@ -15,13 +15,14 @@ Notes
 
 À faire
 -------
-- fonction de construction d'un objet(pour l'instant j'ai fais la sphere)
-- fonction de test de collision entre un objet et un rayon (sphere ok)
+- mtn que j'ai un programme simple qui fct, il faut que je refactorise et que je reflechisse au prochaines etapes
+- pour l'instant, j'insere les spheres une a une, celle qui apparait est la derniere a avoir ete inseree
 	- peut avoir plusieurs resultats, on garde le premier en venant de la cam
 - le calcul de ce qu'il se passe si il y a collision va dependre de plsr choses
 	- transparence ? si oui il y aura une partie refraction
 	- calcul de la normale à l'impact
 	- tir du rayon secondaire vers la source de lumiere
+- fonction de construction d'un objet(pour l'instant j'ai fais la sphere)
 
 > la couleur du pixel à afficher va dependre des angles, de l'intensité lumineuse,
 > de la couleur de l'objet
