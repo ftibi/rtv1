@@ -28,6 +28,8 @@ Notes
 	- clear data
 	- mettre les nvlles donnees dans data
 	- reafficher l'image
+- Est ce que je veux deplacer le plan, ou deplacer les objs en gardant un plan fixe? Cette solution
+est p-e plus facile a implementer
 
 > la couleur du pixel à afficher va dependre des angles, de l'intensité lumineuse,
 > de la couleur de l'objet
