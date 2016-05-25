@@ -6,7 +6,7 @@
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/24 20:36:36 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/24 20:45:11 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/05/25 18:56:24 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,16 @@
 ** Recoder moi meme les operations sur les vecteurs
 ** addition, soustraction, produit scalaire
 */
+
+t_vec	vec_init(double x, double y, double z)
+{
+	t_vec	vec;
+
+	vec.x = x;
+	vec.y = y;
+	vec.z = z;
+	return (vec);
+}
 
 double	produit_scalaire(t_vec a, t_vec b)
 {

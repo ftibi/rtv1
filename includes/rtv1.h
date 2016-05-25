@@ -6,7 +6,7 @@
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/24 16:54:20 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/25 18:26:17 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/05/25 18:56:36 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ void			calc_plan(char *datastr, t_objs *obj, t_data *data);
 double			produit_scalaire(t_vec a, t_vec b);
 t_vec			sum_vec(t_vec a, t_vec b);
 t_vec			sub_vec(t_vec a, t_vec b);
+t_vec			vec_init(double x, double y, double z);
 
 void			my_pixel_put_img(void *mlx, int bpp, int x, int y, int color, char *data);
 
