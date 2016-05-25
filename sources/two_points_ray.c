@@ -6,7 +6,7 @@
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/24 18:23:38 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/24 19:59:35 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/05/25 18:00:22 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ t_vec	two_points_ray(t_vec a, t_vec b)
 	ray.x = (a.x - b.x);
 	ray.y = (a.y - b.y);
 	ray.z = (a.z - b.z);
-	ray = vec_norme(ray);
+	ray = vec_normalize(ray);
 	return (ray);
 }

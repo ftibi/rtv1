@@ -1,39 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   add_objs.c                                         :+:      :+:    :+:   */
+/*   data_init.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/05/24 18:50:43 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/25 17:42:01 by tfolly           ###   ########.fr       */
+/*   Created: 2016/05/25 18:22:28 by tfolly            #+#    #+#             */
+/*   Updated: 2016/05/25 18:25:01 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/rtv1.h"
 
-/*
-** Pushback pour des objs
-*/
-
-t_objs	*add_objs(int color, int type, int size, t_vec pos, t_vec vec, t_objs *objs)
+t_data			*data_init(void *mlx,void *img, char *datastr, int bpp, int end)
 {
-	t_objs	*new;
-	t_objs	*tmp;
+	t_data	*data;
 
-	if (!(new = (t_objs*)ft_memalloc(sizeof(t_objs))))
+	if (!(data = (t_data*)ft_memalloc(sizeof(t_data))))
 		return (0);
-	new->size = size;
-	new->color = color;
-	new->type = type;
-	new->pos = pos;
-	new->vec = vec;
-	new->next = 0;
-	if (!objs)
-		return (new);
-	tmp = objs;
-	while (tmp->next)
-		tmp = tmp->next;
-	tmp->next = new;
-	return (objs);
+	data->mlx = mlx;
+	data->img = img;
+	data->datastr = datastr;
+	data->bpp = bpp;
+	data->end = end;
+	return (data);
 }

@@ -11,18 +11,12 @@ Notes
 - qqpart je vais declarer in const tab de fonctions pour associer le type d'obj a une
 	fonction de calcul de collision
 - est-ce que la scene elle meme doit etre pixelisee ?? A priori non?
- 	- il y a au moins un pas de calcul, donc ca revient a avoir une resolution
-	- Sinon utiliser une solution analytique ou quadratique!
+	- solution analytique ou quadratique!
 
 À faire
 -------
-- fonction de construction du plan image (centre, vecteur normal, taille)
-	- pour creer le plan je vais utiliser les 2 vecteurs qui partent du centre
-	- il va faloir faire des arrondis mais normalement on ne perd pas de resolution
-- fonction de construction d'un rayon
-	- *AB* = *OB* - *OA*
-- fonction de construction d'un objet
-- fonction de test de collision entre un objet et un rayon
+- fonction de construction d'un objet(pour l'instant j'ai fais la sphere)
+- fonction de test de collision entre un objet et un rayon (sphere ok)
 	- peut avoir plusieurs resultats, on garde le premier en venant de la cam
 - le calcul de ce qu'il se passe si il y a collision va dependre de plsr choses
 	- transparence ? si oui il y aura une partie refraction
@@ -33,6 +27,18 @@ Notes
 > de la couleur de l'objet
 
 > pour l'instant je considere la distance plan/camera constante ?
+
+
+Algo test
+---------
+- definir un plan (??)
+- pour chaque point du plan:
+	- projeter un rayon et voir s'il rencontre un obstacle (fct sphere)
+	- si on a rencontre un obstacle, allumer le pixel en rouge
+
+Avant de rendre
+---------------
+- fonction pour free le plan image
 
 References
 ----------

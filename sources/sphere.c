@@ -6,7 +6,7 @@
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/24 16:53:48 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/24 20:58:56 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/05/25 17:03:14 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 ** Collision pour sphere
 ** on va utiliser une solution analytique
 ** ca revient a resoudre un polynome du second degre
+** Cette fonction retourne un pointeur vers le vecteur qui pointe sur
+** l'intersection
+** pt et ray representent le point sur le plan image et le rayon qui en est issu
 */
 
 t_vec		*sphere(t_objs *sphere, t_vec pt, t_vec ray)
@@ -37,11 +40,13 @@ t_vec		*sphere(t_objs *sphere, t_vec pt, t_vec ray)
 	if (!(inter = (t_vec*)ft_memalloc(sizeof(t_vec))))
 		return (0);
 	if (delta == 0)
-		t1 = - b / (2 * a);
-	else if (delta > 0)
+		t1 = -b / (2 * a);
+	else
 	{
-		t1 =
-		t2 =
+		t1 = -b - sqrt(delta) / (2 * a);
+		t2 = -b + sqrt(delta) / (2 * a);
+		if (t2 > t1)
+			t1 = t2;
 	}
 	inter->x = pt.x + t1 * ray.x;
 	inter->y = pt.y + t1 * ray.y;
