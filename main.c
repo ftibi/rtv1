@@ -6,7 +6,7 @@
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/23 19:36:12 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/25 19:46:24 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/05/25 20:22:48 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ int		main(void)
 	pos = vec_init(SIZE / 2, SIZE / 2, SIZE);
 	obj_size = 300;
 	sphere = add_objs(0xFF0000, SPHERE, obj_size, pos, pos, 0);
-	pos = vec_init(SIZE / 4, SIZE / 4, SIZE / 2);
+	pos = vec_init(SIZE / 4, SIZE / 4, SIZE / 4);
 	obj_size = 100;
 	sphere = add_objs(0x00FF00, SPHERE, obj_size, pos, pos, sphere);
-	pos = vec_init(4 * SIZE / 5 , 4 * SIZE / 5, SIZE / 10);
+	pos = vec_init(4 * SIZE / 5 , 4 * SIZE / 5, SIZE);
 	obj_size = 200;
 	sphere = add_objs(0x0000FF, SPHERE, obj_size, pos, pos, sphere);
 	// remplissage de data

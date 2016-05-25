@@ -6,7 +6,7 @@
 /*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/24 16:54:20 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/25 19:31:20 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/05/25 20:21:35 by tfolly           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ t_vec			*sphere(t_objs *sphere, t_vec pt, t_vec ray);
 t_vec			vec_normalize(t_vec vec);
 double			vec_norme(t_vec vec);
 t_vec			two_points_ray(t_vec a, t_vec b);
+t_vec			two_points_ray_unnorm(t_vec a, t_vec b);
 void			calc_plan(char *datastr, t_objs *obj, t_data *data);
 int				premier_plan(t_vec *new, t_vec *ref, t_data *data);
 
