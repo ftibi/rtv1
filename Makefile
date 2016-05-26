@@ -18,15 +18,16 @@ CFLAGS = -Wall -Wextra -Werror
 
 CPPFLAGS = -I./includes -I./libft/includes
 
-MLXFLAGS = -L/usr/local/lib/ -I/usr/local/include -lmlx -framework OpenGL -framework AppKit
+MLXFLAGS = -L/usr/local/lib/ -I/usr/local/include minilibx_macos/libmlx.a -framework OpenGL -framework AppKit
 
 all: $(LIB) $(NAME)
 
 $(LIB):
 	make -C ./libft
+	make -C ./minilibx_macos
 	cp $(LIB) libft.a
 
-$(NAME): $(OBJ) $(LIB)
+$(NAME): $(LIB) $(OBJ)
 	$(CC) -o $(NAME) $(OBJ) $(CPPFLAGS) $(MLXFLAGS) libft.a
 
 
@@ -34,6 +35,7 @@ $(SRC_PATH)%.o: $(SRC_PATH)%.c
 	$(CC) $(CFLAGS) $(CPPFLAGS) -o $@ -c $<
 
 clean:
+	make clean -C ./minilibx_macos
 	make clean -C ./libft
 	rm -fv $(OBJ)
 
@@ -43,7 +45,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all, clean, fclean, re, print, test
+.PHONY: all, clean, fclean, re, test
 
 norme:
 	norminette $(SRC) includes/fractol.h
