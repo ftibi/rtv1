@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rtv1.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
+/*   By: thibaultfolly <thibaultfolly@student.42.fr>+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/05/24 16:54:20 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/25 20:21:35 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/05/29 18:23:15 by thibaultfolly    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,19 @@ typedef struct	s_vec
 	double		y;
 	double		z;
 }				t_vec;
+
+typedef struct	s_mat
+{
+	double		xx;
+	double		xy;
+	double		xz;
+	double		yx;
+	double		yy;
+	double		yz;
+	double		zx;
+	double		zy;
+	double		zz;
+}				t_mat;
 
 typedef struct	s_data
 {

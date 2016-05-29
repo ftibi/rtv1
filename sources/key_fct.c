@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   key_fct.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tfolly <tfolly@student.42.fr>              +#+  +:+       +#+        */
+/*   By: thibaultfolly <thibaultfolly@student.42.fr>+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/17 18:36:10 by tfolly            #+#    #+#             */
-/*   Updated: 2016/05/25 18:12:03 by tfolly           ###   ########.fr       */
+/*   Updated: 2016/05/29 18:23:19 by thibaultfolly    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,20 @@ int		my_key_funct(int keycode)
 	{
 		ft_putendl("exit");
 		exit(0);
+	}
+	if (keycode == 123) //gauche
+	{
+		
+
+	}
+	if (keycode == 124) //droite
+	{
+	}
+	if (keycode == 125) //bas
+	{
+	}
+	if (keycode == 126) //haut
+	{
 	}
 	return (0);
 }

@@ -15,6 +15,8 @@ Notes
 
 À faire
 -------
+- Pour bouger la camera, je peux a la place bouger la scene
+	- reflechir puis implementer cette fonction
 - Pq je segF lorsque j'augmente la position d'un objet > SIZE
 	- peut etre implementer avec des long double ?
 - mtn que j'ai un programme simple qui fct, il faut que je refactorise et que je reflechisse au prochaines etapes
