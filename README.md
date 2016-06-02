@@ -3,11 +3,11 @@ RTv1
 
 Notes
 -----
-- penser aux differentes specificites des materiaux assez tot
-- il doit etre possible d'observer la scene depuis n'importe ou
-	(il faut avoir ca en tete pour le tracer des rayons)
-- apparemment je n'ai pas besoin de stocker la scene, il me suffit de connaitre
-	la position/orientation du plan image, et la position des objets dans la scene
+- ~~penser aux differentes specificites des materiaux assez tot~~
+- ~~il doit etre possible d'observer la scene depuis n'importe ou~~
+	~~(il faut avoir ca en tete pour le tracer des rayons)~~
+- ~~apparemment je n'ai pas besoin de stocker la scene, il me suffit de connaitre~~
+	~~la position/orientation du plan image, et la position des objets dans la scene~~
 - qqpart je vais declarer in const tab de fonctions pour associer le type d'obj a une
 	fonction de calcul de collision
 - est-ce que la scene elle meme doit etre pixelisee ?? A priori non?
@@ -30,13 +30,8 @@ Notes
 	- clear data
 	- mettre les nvlles donnees dans data
 	- reafficher l'image
-- Est ce que je veux deplacer le plan, ou deplacer les objs en gardant un plan fixe? Cette solution
-est p-e plus facile a implementer
-
-> la couleur du pixel à afficher va dependre des angles, de l'intensité lumineuse,
-> de la couleur de l'objet
-
-> pour l'instant je considere la distance plan/camera constante ?
+- ~~Est ce que je veux deplacer le plan, ou deplacer les objs en gardant un plan fixe? Cette solution
+est p-e plus facile a implementer~~
 
 
 Algo test
@@ -49,6 +44,12 @@ Algo test
 Avant de rendre
 ---------------
 - fonction pour free le plan image
+
+Reflexions
+----------
+- Rotation autour du point de vue ? Le plus simple est de faire une rotation autour
+	du centre du plan image et c'est un choix defendable (plutot que de faire une rotation
+	autour du centre de la scene)
 
 References
 ----------
